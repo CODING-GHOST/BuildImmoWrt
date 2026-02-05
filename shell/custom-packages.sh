@@ -75,19 +75,19 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-mod-admin-full luci-mod-network luci-mod-
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-proto-3g luci-proto-ipv6 luci-proto-openconnect luci-proto-ppp luci-proto-qmi luci-proto-relay luci-proto-wireguard"
 
 # 主题相关
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-argon luci-theme-bootstrap luci-theme-design luci-theme-edge luci-theme-material"
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-kucat-config luci-i18n-kucat-config-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-argon luci-theme-bootstrap -luci-theme-design -luci-theme-edge luci-theme-material"
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES -luci-app-kucat-config luci-i18n-kucat-config-zh-cn"
 
 # 网络相关插件
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-ipsec-vpnd luci-app-ddns luci-app-eqosplus luci-app-firewall luci-app-rtbwmon luci-app-upnp luci-app-watchdog"
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-ddns-zh-cn luci-i18n-eqosplus-zh-cn luci-i18n-firewall-zh-cn luci-i18n-rtbwmon-zh-cn luci-i18n-upnp-zh-cn luci-i18n-watchdog-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-ipsec-vpnd luci-app-ddns -luci-app-eqosplus luci-app-firewall -luci-app-rtbwmon luci-app-upnp -luci-app-watchdog"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-ddns-zh-cn -luci-i18n-eqosplus-zh-cn luci-i18n-firewall-zh-cn -luci-i18n-rtbwmon-zh-cn luci-i18n-upnp-zh-cn -luci-i18n-watchdog-zh-cn"
 
 # 工具类插件
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-filemanager luci-app-netdata luci-app-ota luci-app-package-manager luci-app-poweroffdevice luci-app-samba4 luci-app-smartdns"
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-store luci-app-timecontrol luci-app-ttyd luci-app-vlmcsd luci-app-wolplus luci-app-arpbind"
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-filemanager-zh-cn luci-i18n-netdata-zh-cn luci-i18n-ota-zh-cn luci-i18n-package-manager-zh-cn luci-i18n-poweroffdevice-zh-cn"
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-samba4-zh-cn luci-i18n-smartdns-zh-cn luci-i18n-timecontrol-zh-cn luci-i18n-ttyd-zh-cn luci-i18n-wolplus-zh-cn luci-i18n-arpbind-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-filemanager luci-app-netdata -luci-app-ota luci-app-package-manager -luci-app-poweroffdevice luci-app-samba4 luci-app-smartdns"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-store -luci-app-timecontrol luci-app-ttyd luci-app-vlmcsd -luci-app-wolplus luci-app-arpbind"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-filemanager-zh-cn luci-i18n-netdata-zh-cn -luci-i18n-ota-zh-cn luci-i18n-package-manager-zh-cn -luci-i18n-poweroffdevice-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-samba4-zh-cn luci-i18n-smartdns-zh-cn -luci-i18n-timecontrol-zh-cn luci-i18n-ttyd-zh-cn -luci-i18n-wolplus-zh-cn luci-i18n-arpbind-zh-cn"
 
 # 代理/过滤相关（注：原有脚本中排除了openclash和homeproxy，此处保持原有排除逻辑）
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-passwall luci-app-nikki luci-app-lucky"
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-lucky-zh-cn luci-i18n-nikki-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-passwall luci-app-nikki -luci-app-lucky"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES -luci-i18n-lucky-zh-cn luci-i18n-nikki-zh-cn"
