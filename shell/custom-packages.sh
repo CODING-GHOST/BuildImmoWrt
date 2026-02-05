@@ -22,8 +22,8 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-nikki-zh-cn"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-nekobox"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES momo luci-app-momo luci-i18n-momo-zh-cn"
 # 同样是代理相关 但以下2个属于imm仓库内的软件 一般在build24.sh中已经集成 你也可以在此处调整它的去留 若去除组件则使用减号- 若添加则 不使用减号 或者 不处理
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES -luci-app-openclash"
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES -luci-i18n-homeproxy-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-openclash"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-homeproxy-zh-cn"
 # VPN
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-tailscale luci-i18n-tailscale-zh-cn"
 # 分区扩容 by sirpdboy 
@@ -62,3 +62,32 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-rtp2httpd luci-i18n-rtp2httpd-zh-cn"
 
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-ddns-go  luci-i18n-ddns-go-zh-cn luci-i18n-vlmcsd-zh-cn"
 
+# ========== 新增去重后的扩展包列表 ==========
+# 基础依赖与核心组件
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-base luci-i18n-base-zh-cn luci-compat luci-light luci-lua-runtime"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-lib-base luci-lib-ip luci-lib-ipkg luci-lib-jsonc luci-lib-nixio luci-lib-taskd luci-lib-uqr luci-lib-xterm"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES rpcd-mod-luci"
+
+# 系统模块
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-mod-admin-full luci-mod-network luci-mod-status luci-mod-system"
+
+# 协议支持
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-proto-3g luci-proto-ipv6 luci-proto-openconnect luci-proto-ppp luci-proto-qmi luci-proto-relay luci-proto-wireguard"
+
+# 主题相关
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-argon luci-theme-bootstrap luci-theme-design luci-theme-edge luci-theme-material"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-kucat-config luci-i18n-kucat-config-zh-cn"
+
+# 网络相关插件
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-ipsec-vpnd luci-app-ddns luci-app-eqosplus luci-app-firewall luci-app-rtbwmon luci-app-upnp luci-app-watchdog"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-ddns-zh-cn luci-i18n-eqosplus-zh-cn luci-i18n-firewall-zh-cn luci-i18n-rtbwmon-zh-cn luci-i18n-upnp-zh-cn luci-i18n-watchdog-zh-cn"
+
+# 工具类插件
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-filemanager luci-app-netdata luci-app-ota luci-app-package-manager luci-app-poweroffdevice luci-app-samba4 luci-app-smartdns"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-store luci-app-timecontrol luci-app-ttyd luci-app-vlmcsd luci-app-wolplus luci-app-arpbind"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-filemanager-zh-cn luci-i18n-netdata-zh-cn luci-i18n-ota-zh-cn luci-i18n-package-manager-zh-cn luci-i18n-poweroffdevice-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-samba4-zh-cn luci-i18n-smartdns-zh-cn luci-i18n-timecontrol-zh-cn luci-i18n-ttyd-zh-cn luci-i18n-wolplus-zh-cn luci-i18n-arpbind-zh-cn"
+
+# 代理/过滤相关（注：原有脚本中排除了openclash和homeproxy，此处保持原有排除逻辑）
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-passwall luci-app-nikki luci-app-lucky"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-lucky-zh-cn luci-i18n-nikki-zh-cn"
